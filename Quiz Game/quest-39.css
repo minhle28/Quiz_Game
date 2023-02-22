@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227, 240, 255, 0.3);
+    font-family: sans-serif;
+}
+
+#all {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+.min-cir {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(#F5F7F6,#5CA0F2);
+    position:relative;
+    animation: minCircle 5s 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes minCircle {
+    0%   {background-image: linear-gradient(#F5F7F6,#5CA0F2)d; left: 0; top: 0;}
+    100% {background-image: linear-gradient(#F5F7F6,#5CA0F2); left: 810px; top: 0;}
+}
+
+.big-cir {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    left: 760px;
+    top: 280px;
+    background-image: linear-gradient(#F5F7F6,#5CA0F2);
+    position:relative;
+    animation: bigCircle 5s 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bigCircle {
+    0%   {background-image: linear-gradient(#F5F7F6,#5CA0F2); left: 760px; top: 280px;}
+    100% {background-image: linear-gradient(#F5F7F6,#5CA0F2); left: -40px; top: 280px;}
+}
+
+
+#box {
+    width: 800px;
+    height: 440px;
+    border-radius: 40px;
+    background-color: rgb(255,255,255,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+}
+
+.picture {
+    background-image: url("image-1.jpg");
+    background-size: 100%;
+    height: 120px;
+    border-radius: 40px 40px 30% 30%;
+    opacity: 0.7;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    25% {background-image: url("image-2.jpg");}
+    50% {background-image: url("image-3.jpg");}
+    75% {background-image: url("image-4.jpg");}
+    100% {background-image: url("image-1.jpg");}
+}
+
+.content{
+    position: relative;
+}
+
+#grid-content-question{
+    display: grid;
+    grid-template-areas:       
+        "question   question"
+        "answer1    answer2"
+        "answer3    answer4";
+    grid-template-columns: 275px 275px;
+    grid-template-rows: auto 1fr auto auto;   
+    position: absolute;
+    width: 550px;
+    height: 215px;
+    gap:15px;
+    border: 2px gray;
+    top:90px;
+    left:125px;
+    text-align: center;
+    z-index: 10;
+}
+
+#title{    
+    top:70px;
+    left:310px;
+    position: absolute;
+    background-color: #72a9ec;
+    z-index: 11;
+    text-align: center;
+    width:180px;
+    height: 28px;
+    padding-top:10px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+#question {
+    grid-area: question ;
+    width:100%;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #c0ccff;
+    font-size: 15px;
+}
+
+#choice1{
+    grid-area: answer1;
+    outline: none;
+}
+
+#choice2{
+    grid-area: answer2;
+    outline: none;
+}
+
+#choice3{
+    grid-area: answer3;
+    outline: none;
+}
+
+#choice4{
+    grid-area: answer4;
+    outline: none;
+}
+
+.choice{
+    width: 100%;
+    height: 50px;    
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+p {
+    padding-top: 20px;
+}
+
+span {
+    font-weight: bold;
+}
+
+#choice1, #choice2, #choice3, #choice4 {
+    z-index: 12;
+    position: relative;
+    padding: 8px 16px;
+    outline: none;
+    border: 1px solid #c0ccff;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+#choice1::before, #choice2::before, #choice3::before, #choice4::before  {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #72a9ef;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#choice1:hover, #choice2:hover, #choice3:hover, #choice4:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+#choice1:hover::before, #choice2:hover::before, #choice3:hover::before, #choice4:hover::before  {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+#next-button {
+    position: relative;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background: #72a9ef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#play-again-button {
+    position: relative;
+    top: 300px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background: #72a9ef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#correct:checked ~ #next-button, 
+#false-1:checked ~ #play-again-button,
+#false-2:checked ~ #play-again-button,
+#false-3:checked ~ #play-again-button {
+    animation: button 2s 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes button {
+    0%   {top: 300px; opacity: 0;}
+    100% {top: 240px; opacity: 1; visibility: visible;}
+}
+
+#next-button a, #play-again-button a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px 14px;
+}
+
+#next-button:hover, #play-again-button:hover {
+    background-color: #3880df;
+    color: white;
+}
+
+
+#correct {
+    z-index: 13;
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    left: 418px;
+    top: 254px;
+    opacity: 0;
+}
+
+#correct:hover ~ #grid-content-question > #choice4::before {
+    background-color: #72a9ef;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+    transition: transform 0.45s ease-in-out;
+    cursor: pointer;
+    color: #fff;
+}
+
+#correct:hover ~ #grid-content-question > #choice4:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+
+
+#correct:checked ~ #grid-content-question > #choice4 {
+    background-color: #2BDA8E;
+    color: white;
+    z-index: 14;
+}
+
+#correct:checked ~ #grid-content-question > #choice4::before {
+    background-color: #2BDA8E;
+}
+
+#correct:checked ~ #grid-content-question > #choice4:hover::before {
+    background-color: #2BDA8E;
+}
+
+
+#false-1 {
+    z-index: 13;
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    left: 129px;
+    top: 189px;
+    opacity: 0;
+}
+
+#false-2 {
+    z-index: 13;
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    left: 129px;
+    top: 254px;
+    opacity: 0;
+}
+
+#false-3 {
+    z-index: 13;
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    left: 418px;
+    top: 189px;
+    opacity: 0;
+}
+
+#false-1:checked ~ #play-again-button,
+#false-2:checked ~ #play-again-button,
+#false-3:checked ~ #play-again-button {
+    visibility: visible;
+}
+
+
+#false-1:hover ~ #grid-content-question > #choice1::before, 
+#false-2:hover ~ #grid-content-question > #choice3::before,  
+#false-3:hover ~ #grid-content-question > #choice2::before {
+    background-color: #72a9ef;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+    transition: transform 0.45s ease-in-out;
+}
+
+#false-1:hover ~ #grid-content-question > #choice1:hover, 
+#false-2:hover ~ #grid-content-question > #choice3:hover,  
+#false-3:hover ~ #grid-content-question > #choice2:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+#false-1:hover ~ #grid-content-question > #choice1:hover::before, 
+#false-2:hover ~ #grid-content-question > #choice3:hover::before, 
+#false-3:hover ~ #grid-content-question > #choice2:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+
+#false-1:checked ~ #grid-content-question > #choice1, 
+#false-2:checked ~ #grid-content-question > #choice3, 
+#false-3:checked ~ #grid-content-question > #choice2 {
+    background-color: #FF7276;
+    color: white;
+    z-index: 14;
+}
+
+#false-1:checked ~ #grid-content-question > #choice1::before, 
+#false-2:checked ~ #grid-content-question > #choice3::before, 
+#false-3:checked ~ #grid-content-question > #choice2::before {
+    background-color: #FF7276;
+}
+
+#lock {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    z-index: 9;
+}
+
+#correct:checked ~ #lock,
+#false-1:checked ~ #lock,
+#false-2:checked ~ #lock,
+#false-3:checked ~ #lock {
+    z-index: 20;
+}
+
+ 
+
+
