@@ -5,6 +5,12 @@ body {
     font-family: sans-serif;
 }
 
+h3 {
+    text-align: center;
+    color: #5CA0F2;
+    font-weight: bold;
+}
+
 h4, span {
     color: #5CA0F2;
     font-weight: bold;
@@ -81,10 +87,10 @@ h4, span {
 }
 
 
-#back, #next {
+#back{
     position: absolute;
     bottom: 16px;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     outline: none;
     border-radius: 50px;
@@ -99,25 +105,7 @@ h4, span {
     flex-direction: column;
 }
 
-#next {
-    position: absolute;
-    bottom: 16px;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    outline: none;
-    border-radius: 50px;
-    color: #fff;
-    border: none;
-    background: #72a9ef;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#back a, #next a{
+#back a{
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -125,7 +113,7 @@ h4, span {
     border-radius: 50px;
 }
 
-#back:hover, #next:hover{
+#back:hover{
     background-color: #3880df;
     color: white;
 }
