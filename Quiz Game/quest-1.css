@@ -1,12 +1,12 @@
 /* Hidden as start */
-#Q7_title,
-#Q7_grid-content-question,
-#Q7_next-button {
+#Q1_title,
+#Q1_grid-content-question,
+#Q1_next-button {
     z-index: 49;
     opacity: 0;
 }
 
-#Q7_grid-content-question {
+#Q1_grid-content-question {
     display: grid;
     grid-template-areas:
         "question   question"
@@ -22,13 +22,15 @@
     top: 90px;
     left: 125px;
     text-align: center;
+    /*z-index: 56;*/
 }
 
-#Q7_title {
+#Q1_title {
     top: 70px;
     left: 310px;
     position: absolute;
     background-color: #72a9ec;
+    /*z-index: 11;*/
     text-align: center;
     width: 180px;
     height: 28px;
@@ -37,7 +39,7 @@
     color: #ffffff;
 }
 
-#Q7_question {
+#Q1_question {
     grid-area: question;
     width: 100%;
     height: 80px;
@@ -48,30 +50,29 @@
 }
 
 /* correct is number 2*/
-/* answer at location 3, move 2 to 3 */
-#Q7_choice1 {
+#Q1_choice1 {
     grid-area: answer1;
     outline: none;
 }
 
-#Q7_choice2 {
-    grid-area: answer3;
-    outline: none;
-}
-
-#Q7_choice3 {
+#Q1_choice2 {
     grid-area: answer2;
     outline: none;
 }
 
-#Q7_choice4 {
+#Q1_choice3 {
+    grid-area: answer3;
+    outline: none;
+}
+
+#Q1_choice4 {
     grid-area: answer4;
     outline: none;
 }
 
 /* Location of 4 checkbox answer */
 
-#Q7_checkbox-1 {
+#Q1_checkbox-1 {
     position: absolute;
     width: 275px;
     height: 50px;
@@ -80,17 +81,7 @@
     opacity: 0;
 }
 
-#Q7_checkbox-2 {
-
-    position: absolute;
-    width: 275px;
-    height: 50px;
-    left: 175px;
-    top: 275px;
-    opacity: 0;
-}
-
-#Q7_checkbox-3 {
+#Q1_checkbox-2 {
     position: absolute;
     width: 275px;
     height: 50px;
@@ -99,7 +90,16 @@
     opacity: 0;
 }
 
-#Q7_checkbox-4 {
+#Q1_checkbox-3 {
+    position: absolute;
+    width: 275px;
+    height: 50px;
+    left: 175px;
+    top: 275px;
+    opacity: 0;
+}
+
+#Q1_checkbox-4 {
     position: absolute;
     width: 275px;
     height: 50px;
@@ -109,10 +109,10 @@
 }
 
 /* Answer background animation */
-#Q7_choice1,
-#Q7_choice2,
-#Q7_choice3,
-#Q7_choice4 {
+#Q1_choice1,
+#Q1_choice2,
+#Q1_choice3,
+#Q1_choice4 {
     position: relative;
     padding: 8px 16px;
     outline: none;
@@ -121,10 +121,10 @@
 
 }
 
-#Q7_choice1::before,
-#Q7_choice2::before,
-#Q7_choice3::before,
-#Q7_choice4::before {
+#Q1_choice1::before,
+#Q1_choice2::before,
+#Q1_choice3::before,
+#Q1_choice4::before {
     content: "";
     z-index: -1;
     position: absolute;
@@ -139,36 +139,36 @@
     transition: transform 0.45s ease-in-out;
 }
 
-#Q7_checkbox-1:hover~#box>#Q7_grid-content-question>#Q7_choice1,
-#Q7_checkbox-2:hover~#box>#Q7_grid-content-question>#Q7_choice2,
-#Q7_checkbox-3:hover~#box>#Q7_grid-content-question>#Q7_choice3,
-#Q7_checkbox-4:hover~#box>#Q7_grid-content-question>#Q7_choice4 {
+#Q1_checkbox-1:hover~#box>#Q1_grid-content-question>#Q1_choice1,
+#Q1_checkbox-2:hover~#box>#Q1_grid-content-question>#Q1_choice2,
+#Q1_checkbox-3:hover~#box>#Q1_grid-content-question>#Q1_choice3,
+#Q1_checkbox-4:hover~#box>#Q1_grid-content-question>#Q1_choice4 {
     color: red;
-    z-index: 85;
+    z-index: 55;
 }
 
-#Q7_checkbox-1:hover~#box>#Q7_grid-content-question>#Q7_choice1::before,
-#Q7_checkbox-2:hover~#box>#Q7_grid-content-question>#Q7_choice2::before,
-#Q7_checkbox-3:hover~#box>#Q7_grid-content-question>#Q7_choice3::before,
-#Q7_checkbox-4:hover~#box>#Q7_grid-content-question>#Q7_choice4::before {
+#Q1_checkbox-1:hover~#box>#Q1_grid-content-question>#Q1_choice1::before,
+#Q1_checkbox-2:hover~#box>#Q1_grid-content-question>#Q1_choice2::before,
+#Q1_checkbox-3:hover~#box>#Q1_grid-content-question>#Q1_choice3::before,
+#Q1_checkbox-4:hover~#box>#Q1_grid-content-question>#Q1_choice4::before {
     transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
     transition: transform 0.45s ease-in-out;
 }
 
 /* Action when click answer*/
-#Q7_checkbox-2:checked~#box>#Q7_grid-content-question>#Q7_choice2 {
+#Q1_checkbox-2:checked~#box>#Q1_grid-content-question>#Q1_choice2 {
     background-color: #2BDA8E;
     color: white;
 }
 
-#Q7_checkbox-1:checked~#box>#Q7_grid-content-question>#Q7_choice1,
-#Q7_checkbox-3:checked~#box>#Q7_grid-content-question>#Q7_choice3,
-#Q7_checkbox-4:checked~#box>#Q7_grid-content-question>#Q7_choice4 {
+#Q1_checkbox-1:checked~#box>#Q1_grid-content-question>#Q1_choice1,
+#Q1_checkbox-3:checked~#box>#Q1_grid-content-question>#Q1_choice3,
+#Q1_checkbox-4:checked~#box>#Q1_grid-content-question>#Q1_choice4 {
     background-color: #FF7276;
     color: white;
 }
 
-#Q7_lock {
+#Q1_lock {
     position: absolute;
     width: 100%;
     height: 125px;
@@ -177,16 +177,16 @@
     left: 0px;
 }
 
-#Q7_checkbox-1:checked~#Q7_lock,
-#Q7_checkbox-2:checked~#Q7_lock,
-#Q7_checkbox-3:checked~#Q7_lock,
-#Q7_checkbox-4:checked~#Q7_lock {
-    z-index: 89;
+#Q1_checkbox-1:checked~#Q1_lock,
+#Q1_checkbox-2:checked~#Q1_lock,
+#Q1_checkbox-3:checked~#Q1_lock,
+#Q1_checkbox-4:checked~#Q1_lock {
+    z-index: 59;
 }
 
 
 /* next button and checkbox apperance */
-#Q7_checkbox-next {
+#Q1_checkbox-next {
     position: absolute;
     top: 370px;
     left: 405px;
@@ -196,23 +196,23 @@
     z-index: 49;
 }
 
-#Q7_checkbox-1:checked~#Q7_checkbox-next,
-#Q7_checkbox-2:checked~#Q7_checkbox-next,
-#Q7_checkbox-3:checked~#Q7_checkbox-next,
-#Q7_checkbox-4:checked~#Q7_checkbox-next {
-    animation: Q7_Checkbox 1.5s 1;
+#Q1_checkbox-1:checked~#Q1_checkbox-next,
+#Q1_checkbox-2:checked~#Q1_checkbox-next,
+#Q1_checkbox-3:checked~#Q1_checkbox-next,
+#Q1_checkbox-4:checked~#Q1_checkbox-next {
+    animation: Q1_Checkbox 1.5s 1;
     animation-delay: 2s;
     animation-fill-mode: forwards;
 
 }
 
-@keyframes Q7_Checkbox {
+@keyframes Q1_Checkbox {
     100% {
-        z-index: 86;
+        z-index: 56;
     }
 }
 
-#Q7_next-button {
+#Q1_next-button {
     position: relative;
     top: 300px;
     left: 50%;
@@ -230,17 +230,17 @@
     opacity: 0;
 }
 
-#Q7_checkbox-1:checked~#box>#Q7_next-button,
-#Q7_checkbox-2:checked~#box>#Q7_next-button,
-#Q7_checkbox-3:checked~#box>#Q7_next-button,
-#Q7_checkbox-4:checked~#box>#Q7_next-button {
-    animation: Q7_button 2s 1;
+#Q1_checkbox-1:checked~#box>#Q1_next-button,
+#Q1_checkbox-2:checked~#box>#Q1_next-button,
+#Q1_checkbox-3:checked~#box>#Q1_next-button,
+#Q1_checkbox-4:checked~#box>#Q1_next-button {
+    animation: Q1_button 2s 1;
     animation-delay: 2s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-@keyframes Q7_button {
+@keyframes Q1_button {
     0% {
         top: 300px;
         opacity: 0;
@@ -253,7 +253,7 @@
     }
 }
 
-#Q7_next-button a {
+#Q1_next-button a {
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -261,16 +261,16 @@
     padding: 10px 14px;
 }
 
-#Q7_checkbox-next:hover~#box>#Q7_next-button {
+#Q1_checkbox-next:hover~#box>#Q1_next-button {
     background-color: #3880df;
     color: white;
 }
 
 /*************************************************************************************************/
-/* When Next button click, transition for Question 8*/
-#Q7_checkbox-next:checked~#box>#Q7_next-button,
-#Q7_checkbox-next:checked~#box>#Q7_title,
-#Q7_checkbox-next:checked~#box>#Q7_grid-content-question {
+/* When Next button click, transition for Question 2*/
+#Q1_checkbox-next:checked~#box>#Q1_next-button,
+#Q1_checkbox-next:checked~#box>#Q1_title,
+#Q1_checkbox-next:checked~#box>#Q1_grid-content-question {
     display: none;
     top: 0;
     left: 0;
@@ -280,14 +280,13 @@
     /* hiden current view */
 }
 
-#Q7_checkbox-next:checked~#Q7_lock {
+#Q1_checkbox-next:checked~#Q1_lock {
     height: 250PX;
 }
 
 /**************************************************************/
-/*  Question 8 Boder animation*/
-
-#Q7_checkbox-next:checked~.min-cir {
+/*  Question 2 Boder animation*/
+#Q1_checkbox-next:checked~.min-cir {
     width: 90px;
     height: 90px;
     border-radius: 50px;
@@ -295,12 +294,12 @@
     top: 0px;
     background-image: linear-gradient(#F5F7F6, #5CA0F2);
     position: relative;
-    animation: Q8_minCircle 5s 1;
+    animation: Q2_minCircle 5s 1;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
-@keyframes Q8_minCircle {
+@keyframes Q2_minCircle {
     0% {
         background-image: linear-gradient(#F5F7F6, #5CA0F2)d;
         left: 810px;
@@ -317,7 +316,7 @@
     }
 }
 
-#Q7_checkbox-next:checked~.big-cir {
+#Q1_checkbox-next:checked~.big-cir {
     width: 180px;
     height: 180px;
     border-radius: 100px;
@@ -325,12 +324,12 @@
     top: 280px;
     background-image: linear-gradient(#F5F7F6, #5CA0F2);
     position: relative;
-    animation: Q8_bigCircle 5s 1;
+    animation: Q2_bigCircle 5s 1;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
-@keyframes Q8_bigCircle {
+@keyframes Q2_bigCircle {
     0% {
         background-image: linear-gradient(#F5F7F6, #5CA0F2);
         left: -40px;
@@ -346,26 +345,25 @@
     }
 }
 
-/* Question 8 Start */
+/* Question 2 Start */
 
-#Q7_checkbox-next:checked~#box>#Q8_grid-content-question {
-    z-index: 90;
+#Q1_checkbox-next:checked~#box>#Q2_grid-content-question {
+    z-index: 60;
     opacity: 1;
 }
 
-#Q7_checkbox-next:checked~#box>#Q8_next-button {
-    z-index: 90;
+#Q1_checkbox-next:checked~#box>#Q2_next-button {
+    z-index: 60;
 }
 
-#Q7_checkbox-next:checked~#box>#Q8_title {
-    z-index: 91;
+#Q1_checkbox-next:checked~#box>#Q2_title {
+    z-index: 61;
     opacity: 1;
 }
 
-#Q7_checkbox-next:checked~#Q8_checkbox-1,
-#Q7_checkbox-next:checked~#Q8_checkbox-2,
-#Q7_checkbox-next:checked~#Q8_checkbox-3,
-#Q7_checkbox-next:checked~#Q8_checkbox-4 {
-    z-index: 91;
-
+#Q1_checkbox-next:checked~#Q2_checkbox-1,
+#Q1_checkbox-next:checked~#Q2_checkbox-2,
+#Q1_checkbox-next:checked~#Q2_checkbox-3,
+#Q1_checkbox-next:checked~#Q2_checkbox-4 {
+    z-index: 61;
 }

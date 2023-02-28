@@ -1,78 +1,38 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(227, 240, 255, 0.3);
-    font-family: sans-serif;
+
+#Aboutpage_content{
+    position: absolute;
+    z-index: 49;
+    width: 800px;
+    height: 440px;
+    border-radius: 40px;
+    background-color:rgb(255, 255, 255, 0.5);
+    opacity: 0;
 }
 
-h4, span {
+#Aboutpage_introduction h4, span {
     color: #5CA0F2;
     font-weight: bold;
 }
 
-
-#win {
+#Aboutpage_win {
     color: #3f7fcc;
     font-weight: bold;
 }
 
-#reset {
+#Aboutpage_reset {
     color: red;
     font-weight: bold;
 }
-
-#all {
-    width: 900px;
-    height: 500px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 10%);
-}
-
-.min-cir {
-    width: 90px;
-    height: 90px;
-    border-radius: 50px;
-    left: 0;
-    top: 0;
-    background-image: linear-gradient(#F5F7F6,#5CA0F2);
-    position:relative;
-}
-
-.big-cir {
+#Aboutpage_logo {
     width: 180px;
     height: 180px;
-    border-radius: 100px;
-    left: 760px;
-    top: 280px;
-    background-image: linear-gradient(#F5F7F6,#5CA0F2);
-    position:relative;
-}
-
-
-#box {
-    width: 800px;
-    height: 440px;
-    border-radius: 40px;
-    background-color: rgb(255,255,255,0.5);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
-}
-
-#logo {
-    width: 180px;
-    height:180px;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#introduction {
+#Aboutpage_introduction {
     width: 60%;
     position: absolute;
     top: 54%;
@@ -80,11 +40,10 @@ h4, span {
     transform: translate(-50%, -50%);
 }
 
-
-#back, #next {
+#Aboutpage_back {
     position: absolute;
     bottom: 16px;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     outline: none;
     border-radius: 50px;
@@ -99,25 +58,7 @@ h4, span {
     flex-direction: column;
 }
 
-#next {
-    position: absolute;
-    bottom: 16px;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    outline: none;
-    border-radius: 50px;
-    color: #fff;
-    border: none;
-    background: #72a9ef;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#back a, #next a{
+#Aboutpage_back a{
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -125,8 +66,7 @@ h4, span {
     border-radius: 50px;
 }
 
-#back:hover, #next:hover{
+#Aboutpage_back:hover{
     background-color: #3880df;
     color: white;
 }
-
