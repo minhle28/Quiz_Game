@@ -142,8 +142,7 @@
 #Q2_checkbox-2:hover~#box>#Q2_grid-content-question>#Q2_choice2,
 #Q2_checkbox-3:hover~#box>#Q2_grid-content-question>#Q2_choice3,
 #Q2_checkbox-4:hover~#box>#Q2_grid-content-question>#Q2_choice4 {
-    color: red;
-    z-index: 60;
+   z-index: 60;
 }
 
 #Q2_checkbox-1:hover~#box>#Q2_grid-content-question>#Q2_choice1::before,

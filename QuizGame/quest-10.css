@@ -145,7 +145,7 @@
 #Q10_checkbox-2:hover~#box>#Q10_grid-content-question>#Q10_choice2,
 #Q10_checkbox-3:hover~#box>#Q10_grid-content-question>#Q10_choice3,
 #Q10_checkbox-4:hover~#box>#Q10_grid-content-question>#Q10_choice4 {
-    color: red;
+
     z-index: 100;
 }
 

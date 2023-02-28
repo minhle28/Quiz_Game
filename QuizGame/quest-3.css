@@ -143,7 +143,7 @@
 #Q3_checkbox-2:hover~#box>#Q3_grid-content-question>#Q3_choice2,
 #Q3_checkbox-3:hover~#box>#Q3_grid-content-question>#Q3_choice3,
 #Q3_checkbox-4:hover~#box>#Q3_grid-content-question>#Q3_choice4 {
-    color: red;
+
     z-index: 65;
 }
 

@@ -141,7 +141,7 @@
 #Q5_checkbox-2:hover~#box>#Q5_grid-content-question>#Q5_choice2,
 #Q5_checkbox-3:hover~#box>#Q5_grid-content-question>#Q5_choice3,
 #Q5_checkbox-4:hover~#box>#Q5_grid-content-question>#Q5_choice4 {
-    color: red;
+
     z-index: 75;
 }
 
