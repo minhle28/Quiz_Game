@@ -183,7 +183,7 @@
 #Q8_checkbox-4:checked~#Q8_lock {
     z-index: 94;
 }
-#Q8checkbox-2:checked {
+#Q8_checkbox-2:checked {
     counter-increment: checkBox-counter;
 }
 
