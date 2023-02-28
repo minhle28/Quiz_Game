@@ -1,0 +1,345 @@
+/* 
+Starting set up frame for all silde
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227, 240, 255, 0.3);
+    font-family: sans-serif;
+    z-index: 50;
+    counter-reset: checkBox-counter 0;  
+}
+
+#all {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    z-index: 50;
+}
+
+.min-cir {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(#F5F7F6, #5CA0F2);
+    position: relative;
+    z-index: 50;
+}
+
+.big-cir {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    left: 760px;
+    top: 280px;
+    background-image: linear-gradient(#F5F7F6, #5CA0F2);
+    position: relative;
+    z-index: 50;
+}
+
+#box {
+    width: 800px;
+    height: 440px;
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+    z-index: 50;
+}
+
+/* Home page content config */
+#Homepage_logo {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+
+#Homepage_welcome {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 35px;
+    z-index: 50;
+}
+
+#Homepage_sentence {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gray;
+    z-index: 50;
+}
+
+span {
+    color: #398bee;
+}
+
+#Homepage_about {
+    margin-top: 18px;
+    z-index: 50;
+}
+
+#Homepage_about {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    background: #72a9ef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    z-index: 50;
+}
+
+#Homepage_start {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    background: #72a9ef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    z-index: 50;
+}
+
+#Homepage_start a,
+#Homepage_about a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+}
+
+#Homepage_checkbox-about {
+    position: absolute;
+    top: 65%;
+    left: 43%;
+    width: 115px;
+    height: 40px;
+    opacity: 0;
+    z-index: 51;
+}
+
+/* Check box location */
+#Homepage_checkbox-start {
+    position: absolute;
+    top: 80%;
+    left: 43%;
+    width: 115px;
+    height: 40px;
+    opacity: 0;
+    z-index: 51;
+}
+
+#Homepage_checkbox-about:hover~#box>#Homepage_content>#Homepage_about {
+    background-color: #3880df;
+    color: white;
+}
+
+#Homepage_checkbox-start:hover~#box>#Homepage_content>#Homepage_start {
+    background-color: #3880df;
+    color: white;
+}
+
+/*************************************************************/
+#Home_lock {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    z-index: 49;
+    top: 300px;
+    left: 0px;
+}
+
+#Homepage_checkbox-start:checked~#Home_lock,
+#Homepage_checkbox-about:checked~#Home_lock {
+    z-index: 52;
+}
+/* When About button click, trasition for About content*/
+#Homepage_checkbox-about:checked~#box>#Aboutpage_content {
+    z-index: 55;
+    opacity: 1;
+    /* Show About content*/
+}
+
+#Homepage_checkbox-about:checked~#box>#Homepage_content {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    /* hiden current view */
+}
+#Homepage_checkbox-about:checked~#Aboutpage_checkbox-next{
+    z-index: 56;
+}
+/*************************************************************/
+/* Quest Form default format */
+.choice {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+p {
+    padding-top: 20px;
+}
+
+#Quest_content {
+    opacity: 0;
+    position: absolute;
+    z-index: 49;
+}
+
+/*  Question Form Header animation forever*/
+#Homepage_checkbox-start:checked~#box>#picture {
+    background-image: url("image-1.jpg");
+    background-size: 100%;
+    height: 120px;
+    border-radius: 40px 40px 30% 30%;
+    opacity: 0.7;
+    animation: slide 20s infinite;
+    z-index: 55;
+}
+
+@keyframes slide {
+    25% {
+        background-image: url("image-2.jpg");
+    }
+
+    50% {
+        background-image: url("image-3.jpg");
+    }
+
+    75% {
+        background-image: url("image-4.jpg");
+    }
+
+    100% {
+        background-image: url("image-1.jpg");
+    }
+}
+
+
+/* When Start button click, transition for Question 1*/
+#Homepage_checkbox-start:checked~#box>#Homepage_content {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    /* hiden current view */
+}
+
+/**************************************************************/
+/*  Question 1 Boder animation*/
+#Homepage_checkbox-start:checked~.min-cir {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(#F5F7F6, #5CA0F2);
+    position: relative;
+    animation: Q1_minCircle 5s 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Q1_minCircle {
+    0% {
+        background-image: linear-gradient(#F5F7F6, #5CA0F2)d;
+        left: 0;
+        top: 0;
+    }
+
+    100% {
+        background-image: linear-gradient(#F5F7F6, #5CA0F2);
+        left: 810px;
+        top: 0;
+    }
+}
+
+#Homepage_checkbox-start:checked~.big-cir {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    left: 760px;
+    top: 280px;
+    background-image: linear-gradient(#F5F7F6, #5CA0F2);
+    position: relative;
+    animation: Q1_bigCircle 5s 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Q1_bigCircle {
+    0% {
+        background-image: linear-gradient(#F5F7F6, #5CA0F2);
+        left: 760px;
+        top: 280px;
+    }
+
+    100% {
+        background-image: linear-gradient(#F5F7F6, #5CA0F2);
+        left: -40px;
+        top: 280px;
+    }
+}
+
+/* Question 1 Start */
+
+#Homepage_checkbox-start:checked~#box>#Q1_grid-content-question {
+    z-index: 55;
+    opacity: 1;
+}
+
+#Homepage_checkbox-start:checked~#box>#Q1_next-button {
+    z-index: 55;
+}
+
+#Homepage_checkbox-start:checked~#box>#Q1_title {
+    z-index: 56;
+    opacity: 1;
+}
+
+#Homepage_checkbox-start:checked~#Q1_checkbox-1,
+#Homepage_checkbox-start:checked~#Q1_checkbox-2,
+#Homepage_checkbox-start:checked~#Q1_checkbox-3,
+#Homepage_checkbox-start:checked~#Q1_checkbox-4 {
+    z-index: 56;
+
+}

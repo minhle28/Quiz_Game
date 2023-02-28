@@ -1,0 +1,106 @@
+
+#Aboutpage_content{
+    position: absolute;
+    z-index: 49;
+    width: 800px;
+    height: 440px;
+    border-radius: 40px;
+    background-color:rgb(255, 255, 255, 0.5);
+    opacity: 0;
+}
+
+#Aboutpage_introduction h4, span {
+    color: #5CA0F2;
+    font-weight: bold;
+}
+
+#Aboutpage_win {
+    color: #3f7fcc;
+    font-weight: bold;
+}
+
+#Aboutpage_reset {
+    color: red;
+    font-weight: bold;
+}
+#Aboutpage_logo {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Aboutpage_introduction {
+    width: 60%;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#Aboutpage_next {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    background: #72a9ef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Aboutpage_next a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+}
+
+#Aboutpage_checkbox-next {
+    position: absolute;
+    top: 78%;
+    left: 44%;
+    width: 115px;
+    height: 45px;
+    opacity: 0;
+    z-index: 49;
+}
+
+#Aboutpage_checkbox-next:hover~ #box>#Aboutpage_content> #Aboutpage_next{
+    background-color: #3880df;
+    color: white;
+}
+
+/*************************************************************************************************/
+/* When Next button click, transition for Develop page*/
+#Aboutpage_checkbox-next:checked~#box>#Aboutpage_content {
+    display: none;
+    top: 0;
+    left: 0;
+    height: 0px;
+    width: 0px;
+    z-index: 49;
+    /* hiden current view */
+}
+
+#Aboutpage_checkbox-next:checked~#box>#Develop_logo,
+#Aboutpage_checkbox-next:checked~#box>#Develop_introduction,
+#Aboutpage_checkbox-next:checked~#box>#Develop_back {
+    z-index: 60;
+    opacity: 1;
+}
+#Aboutpage_checkbox-next:checked~#Home_lock{
+    z-index: 65;
+    width: 70%;
+}

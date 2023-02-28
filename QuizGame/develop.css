@@ -1,0 +1,67 @@
+
+#Develop_logo,
+#Develop_introduction,
+#Develop_back{
+    z-index: 49;
+    opacity: 0;
+}
+
+
+#Develop_introduction h3 {
+    text-align: center;
+    color: #5CA0F2;
+    font-weight: bold;
+}
+
+#Develop_introduction h4, 
+#Develop_introduction span {
+    color: #5CA0F2;
+    font-weight: bold;
+}
+
+#Develop_introduction {
+    width: 60%;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#Develop_logo {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Develop_back {
+    position: absolute;
+    bottom: 16px;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    background: #72a9ef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Develop_back a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+}
+
+#Develop_back:hover {
+    background-color: #3880df;
+    color: white;
+}
