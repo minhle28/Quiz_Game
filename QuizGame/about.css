@@ -19,10 +19,6 @@
     font-weight: bold;
 }
 
-#Aboutpage_reset {
-    color: red;
-    font-weight: bold;
-}
 #Aboutpage_logo {
     width: 180px;
     height: 180px;
@@ -84,23 +80,18 @@
 
 /*************************************************************************************************/
 /* When Next button click, transition for Develop page*/
-#Aboutpage_checkbox-next:checked~#box>#Aboutpage_content {
+#Aboutpage_checkbox-next:checked~#box>#Aboutpage_content,
+#Aboutpage_checkbox-next:checked {
     display: none;
-    top: 0;
-    left: 0;
-    height: 0px;
-    width: 0px;
-    z-index: 49;
     /* hiden current view */
 }
 
-#Aboutpage_checkbox-next:checked~#box>#Develop_logo,
-#Aboutpage_checkbox-next:checked~#box>#Develop_introduction,
-#Aboutpage_checkbox-next:checked~#box>#Develop_back {
+#Aboutpage_checkbox-next:checked~#box>#Develop_content {
     z-index: 60;
     opacity: 1;
 }
+
 #Aboutpage_checkbox-next:checked~#Home_lock{
-    z-index: 65;
+    z-index: 50;
     width: 70%;
 }

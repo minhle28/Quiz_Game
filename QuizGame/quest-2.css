@@ -71,7 +71,6 @@
 /* Location of 4 checkbox answer */
 /* Anser at location 1, switch 2 to 1*/
 #Q2_checkbox-1 {
-
     position: absolute;
     width: 275px;
     height: 50px;
@@ -142,7 +141,7 @@
 #Q2_checkbox-2:hover~#box>#Q2_grid-content-question>#Q2_choice2,
 #Q2_checkbox-3:hover~#box>#Q2_grid-content-question>#Q2_choice3,
 #Q2_checkbox-4:hover~#box>#Q2_grid-content-question>#Q2_choice4 {
-   z-index: 60;
+    z-index: 60;
 }
 
 #Q2_checkbox-1:hover~#box>#Q2_grid-content-question>#Q2_choice1::before,
@@ -166,7 +165,7 @@
     color: white;
 }
 
-#Q2_lock {
+#Q_lock {
     position: absolute;
     width: 100%;
     height: 125px;
@@ -175,12 +174,14 @@
     left: 0px;
 }
 
-#Q2_checkbox-1:checked~#Q2_lock,
-#Q2_checkbox-2:checked~#Q2_lock,
-#Q2_checkbox-3:checked~#Q2_lock,
-#Q2_checkbox-4:checked~#Q2_lock {
-    z-index: 64;
+#Q2_checkbox-1:checked~#Q_lock,
+#Q2_checkbox-2:checked~#Q_lock,
+#Q2_checkbox-3:checked~#Q_lock,
+#Q2_checkbox-4:checked~#Q_lock {
+    z-index: 61;
+    height: 125px;
 }
+
 #Q2_checkbox-2:checked {
     counter-increment: checkBox-counter;
 }
@@ -270,17 +271,13 @@
 /* When Next button click, transition for Question 2*/
 #Q2_checkbox-next:checked~#box>#Q2_next-button,
 #Q2_checkbox-next:checked~#box>#Q2_title,
-#Q2_checkbox-next:checked~#box>#Q2_grid-content-question {
+#Q2_checkbox-next:checked~#box>#Q2_grid-content-question,
+#Q2_checkbox-next:checked {
     display: none;
-    top: 0;
-    left: 0;
-    height: 0px;
-    width: 0px;
-    z-index: 49;
     /* hiden current view */
 }
 
-#Q2_checkbox-next:checked~#Q2_lock {
+#Q2_checkbox-next:checked~#Q_lock {
     height: 250PX;
 }
 

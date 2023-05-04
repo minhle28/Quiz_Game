@@ -1,8 +1,10 @@
-
-#Develop_logo,
-#Develop_introduction,
-#Develop_back{
+#Develop_content{
+    position: absolute;
     z-index: 49;
+    width: 800px;
+    height: 440px;
+    border-radius: 40px;
+    background-color:rgb(255, 255, 255, 0.5);
     opacity: 0;
 }
 
@@ -26,6 +28,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 #Develop_logo {
     width: 180px;
     height: 180px;
@@ -38,7 +41,7 @@
 #Develop_back {
     position: absolute;
     bottom: 16px;
-    left: 80%;
+    left: 50%;
     transform: translate(-50%, -50%);
     outline: none;
     border-radius: 50px;

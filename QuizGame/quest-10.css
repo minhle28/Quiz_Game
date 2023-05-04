@@ -3,7 +3,7 @@
 #Q10_grid-content-question,
 #Q10_next-button,
 #announce,
-#Final_back{
+#Final_back {
     z-index: 49;
     opacity: 0;
 }
@@ -120,7 +120,6 @@
     outline: none;
     border: 1px solid #c0ccff;
     overflow: hidden;
-
 }
 
 #Q10_choice1::before,
@@ -145,7 +144,6 @@
 #Q10_checkbox-2:hover~#box>#Q10_grid-content-question>#Q10_choice2,
 #Q10_checkbox-3:hover~#box>#Q10_grid-content-question>#Q10_choice3,
 #Q10_checkbox-4:hover~#box>#Q10_grid-content-question>#Q10_choice4 {
-
     z-index: 100;
 }
 
@@ -170,7 +168,7 @@
     color: white;
 }
 
-#Q10_lock {
+#Q_lock {
     position: absolute;
     width: 100%;
     height: 125px;
@@ -179,25 +177,37 @@
     left: 0px;
 }
 
-#Q10_checkbox-1:checked~#Q10_lock,
-#Q10_checkbox-2:checked~#Q10_lock,
-#Q10_checkbox-3:checked~#Q10_lock,
-#Q10_checkbox-4:checked~#Q10_lock {
-    z-index: 104;
+#Q10_checkbox-1:checked~#Q_lock,
+#Q10_checkbox-2:checked~#Q_lock,
+#Q10_checkbox-3:checked~#Q_lock,
+#Q10_checkbox-4:checked~#Q_lock {
+    height: 130px;
+    top: 205px;
+    z-index: 105;
 }
+
 #Q10_checkbox-2:checked {
     counter-increment: checkBox-counter;
 }
 
+#Q10_checkbox-1:checked~#Home_lock,
+#Q10_checkbox-2:checked~#Home_lock,
+#Q10_checkbox-3:checked~#Home_lock,
+#Q10_checkbox-4:checked~#Home_lock {
+    display: none;
+}
+
 /**************************************************************/
-/* When Next button click, transition for End Game*/
+/* When Choice button click, transition for End Game*/
 /**************************************************************/
 #win {
     color: #2BDA8E;
 }
+
 #text {
     color: gray;
 }
+
 #congrats {
     position: relative;
     top: -300px;
@@ -207,7 +217,7 @@
 #Q10_checkbox-1:checked~#box>#announce>#congrats,
 #Q10_checkbox-2:checked~#box>#announce>#congrats,
 #Q10_checkbox-3:checked~#box>#announce>#congrats,
-#Q10_checkbox-4:checked~#box>#announce>#congrats{
+#Q10_checkbox-4:checked~#box>#announce>#congrats {
     animation: congrat 2s 1;
     animation-delay: 11s;
     animation-fill-mode: forwards;
@@ -228,7 +238,7 @@
 #Q10_checkbox-1:checked~#box>#announce>#text:after,
 #Q10_checkbox-2:checked~#box>#announce>#text:after,
 #Q10_checkbox-3:checked~#box>#announce>#text:after,
-#Q10_checkbox-4:checked~#box>#announce>#text:after{
+#Q10_checkbox-4:checked~#box>#announce>#text:after {
     content: "You answered correctly " counter(checkBox-counter) " questions.";
 }
 
@@ -240,7 +250,7 @@
 #Q10_checkbox-1:checked~#box>#Q10_grid-content-question,
 #Q10_checkbox-2:checked~#box>#Q10_grid-content-question,
 #Q10_checkbox-3:checked~#box>#Q10_grid-content-question,
-#Q10_checkbox-4:checked~#box>#Q10_grid-content-question{
+#Q10_checkbox-4:checked~#box>#Q10_grid-content-question {
     opacity: 1;
     animation: blur 5s 1;
     animation-delay: 3s;
@@ -254,7 +264,7 @@
 
     100% {
         opacity: 0;
-        z-index: 0;
+        display: none;
     }
 }
 
@@ -280,6 +290,7 @@
         opacity: 0;
     }
 }
+
 #announce {
     width: 100%;
     margin: 100px 0 120px;
@@ -293,7 +304,7 @@
 #Q10_checkbox-1:checked~#box>#announce,
 #Q10_checkbox-2:checked~#box>#announce,
 #Q10_checkbox-3:checked~#box>#announce,
-#Q10_checkbox-4:checked~#box>#announce{
+#Q10_checkbox-4:checked~#box>#announce {
     width: 100%;
     margin: 100px 0 120px;
     color: #72a9ef;
@@ -332,7 +343,7 @@ h4 {
 #Q10_checkbox-1:checked~#box>#announce,
 #Q10_checkbox-2:checked~#box>#announce,
 #Q10_checkbox-3:checked~#box>#announce,
-#Q10_checkbox-4:checked~#box>#announce{
+#Q10_checkbox-4:checked~#box>#announce {
     animation: congrat 2s 1;
     animation-delay: 11s;
     animation-fill-mode: forwards;
@@ -357,9 +368,9 @@ h4 {
 #Q10_checkbox-1:checked~#box>#announce>#win,
 #Q10_checkbox-2:checked~#box>#announce>#win,
 #Q10_checkbox-3:checked~#box>#announce>#win,
-#Q10_checkbox-4:checked~#box>#announce>#win{
+#Q10_checkbox-4:checked~#box>#announce>#win {
     animation: winbeat 2s ease infinite;
-    animation-delay: 13s;
+    animation-delay: 14s;
 }
 
 @keyframes winbeat {
@@ -382,4 +393,53 @@ h4 {
 
 .text {
     color: gray;
+}
+
+#Home_button {
+    position: relative;
+    top: 50px;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background: #72a9ef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 #c0ccff, 0 6px 20px 0 #c0ccff;
+}
+
+#Q10_checkbox-1:checked~#box>#announce>#Home_button,
+#Q10_checkbox-2:checked~#box>#announce>#Home_button,
+#Q10_checkbox-3:checked~#box>#announce>#Home_button,
+#Q10_checkbox-4:checked~#box>#announce>#Home_button {
+    animation: home-button 5s 1;
+    animation-delay: 14s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes home-button {
+    0% {
+        top: 80px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 30px;
+        opacity: 1;
+    }
+}
+
+#Home_button a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 12px 14px;
+}
+
+#Home_button:hover {
+    background-color: #3880df;
+    color: white;
 }

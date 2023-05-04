@@ -168,7 +168,7 @@
     color: white;
 }
 
-#Q4_lock {
+#Q_lock {
     position: absolute;
     width: 100%;
     height: 125px;
@@ -177,16 +177,18 @@
     left: 0px;
 }
 
-#Q4_checkbox-1:checked~#Q4_lock,
-#Q4_checkbox-2:checked~#Q4_lock,
-#Q4_checkbox-3:checked~#Q4_lock,
-#Q4_checkbox-4:checked~#Q4_lock {
+#Q4_checkbox-1:checked~#Q_lock,
+#Q4_checkbox-2:checked~#Q_lock,
+#Q4_checkbox-3:checked~#Q_lock,
+#Q4_checkbox-4:checked~#Q_lock {
     z-index: 74;
+    height: 125px;
 }
 
 #Q4_checkbox-2:checked {
     counter-increment: checkBox-counter;
 }
+
 /* next button and checkbox apperance */
 #Q4_checkbox-next {
     position: absolute;
@@ -272,17 +274,13 @@
 /* When Next button click, transition for Question 5*/
 #Q4_checkbox-next:checked~#box>#Q4_next-button,
 #Q4_checkbox-next:checked~#box>#Q4_title,
-#Q4_checkbox-next:checked~#box>#Q4_grid-content-question {
+#Q4_checkbox-next:checked~#box>#Q4_grid-content-question,
+#Q4_checkbox-next:checked {
     display: none;
-    top: 0;
-    left: 0;
-    height: 0px;
-    width: 0px;
-    z-index: 49;
     /* hiden current view */
 }
 
-#Q4_checkbox-next:checked~#Q4_lock {
+#Q4_checkbox-next:checked~#Q_lock {
     height: 250PX;
 }
 

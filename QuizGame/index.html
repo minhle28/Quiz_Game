@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="quest-9.css">
     <link rel="stylesheet" href="quest-10.css">
     <link rel="stylesheet" href="develop.css">
-
 </head>
 
 <body>
@@ -30,46 +29,55 @@
         <input type="checkbox" id="Q1_checkbox-3">
         <input type="checkbox" id="Q1_checkbox-4">
         <input type="checkbox" id="Q1_checkbox-next">
+
         <input type="checkbox" id="Q2_checkbox-1">
         <input type="checkbox" id="Q2_checkbox-2">
         <input type="checkbox" id="Q2_checkbox-3">
         <input type="checkbox" id="Q2_checkbox-4">
         <input type="checkbox" id="Q2_checkbox-next">
+
         <input type="checkbox" id="Q3_checkbox-1">
         <input type="checkbox" id="Q3_checkbox-2">
         <input type="checkbox" id="Q3_checkbox-3">
         <input type="checkbox" id="Q3_checkbox-4">
         <input type="checkbox" id="Q3_checkbox-next">
+
         <input type="checkbox" id="Q4_checkbox-1">
         <input type="checkbox" id="Q4_checkbox-2">
         <input type="checkbox" id="Q4_checkbox-3">
         <input type="checkbox" id="Q4_checkbox-4">
         <input type="checkbox" id="Q4_checkbox-next">
+
         <input type="checkbox" id="Q5_checkbox-1">
         <input type="checkbox" id="Q5_checkbox-2">
         <input type="checkbox" id="Q5_checkbox-3">
         <input type="checkbox" id="Q5_checkbox-4">
         <input type="checkbox" id="Q5_checkbox-next">
+
         <input type="checkbox" id="Q6_checkbox-1">
         <input type="checkbox" id="Q6_checkbox-2">
         <input type="checkbox" id="Q6_checkbox-3">
         <input type="checkbox" id="Q6_checkbox-4">
         <input type="checkbox" id="Q6_checkbox-next">
+
         <input type="checkbox" id="Q7_checkbox-1">
         <input type="checkbox" id="Q7_checkbox-2">
         <input type="checkbox" id="Q7_checkbox-3">
         <input type="checkbox" id="Q7_checkbox-4">
         <input type="checkbox" id="Q7_checkbox-next">
+
         <input type="checkbox" id="Q8_checkbox-1">
         <input type="checkbox" id="Q8_checkbox-2">
         <input type="checkbox" id="Q8_checkbox-3">
         <input type="checkbox" id="Q8_checkbox-4">
         <input type="checkbox" id="Q8_checkbox-next">
+
         <input type="checkbox" id="Q9_checkbox-1">
         <input type="checkbox" id="Q9_checkbox-2">
         <input type="checkbox" id="Q9_checkbox-3">
         <input type="checkbox" id="Q9_checkbox-4">
         <input type="checkbox" id="Q9_checkbox-next">
+
         <input type="checkbox" id="Q10_checkbox-1">
         <input type="checkbox" id="Q10_checkbox-2">
         <input type="checkbox" id="Q10_checkbox-3">
@@ -77,22 +85,13 @@
         <div class="min-cir"></div>
         <div class="big-cir"></div>
         <div id="Home_lock"></div>
-        <div id="Q1_lock"></div>
-        <div id="Q2_lock"></div>
-        <div id="Q3_lock"></div>
-        <div id="Q4_lock"></div>
-        <div id="Q5_lock"></div>
-        <div id="Q6_lock"></div>
-        <div id="Q7_lock"></div>
-        <div id="Q8_lock"></div>
-        <div id="Q9_lock"></div>
-        <div id="Q10_lock"></div>
+        <div id="Q_lock"></div>
         <div id="box">
             <div id="picture"></div>
+
             <!-- Home page content-->
             <div id="Homepage_content">
-
-                <img id="Homepage_logo" src="logo.png" alt="quiz-logo">
+                <img id="Homepage_logo" src="pics/logo.png" alt="quiz-logo">
                 <p id="Homepage_welcome"> Welcome to <span>Quiz Game</span></p>
                 <p id="Homepage_sentence">Taking the quiz can help you learn new things and improve your knowledge.</p>
 
@@ -104,9 +103,10 @@
                     <a href="" class="start_button">START</a>
                 </button>
             </div>
+
             <!-- About content-->
             <div id="Aboutpage_content">
-                <img id="Aboutpage_logo" src="logo.png" alt="quiz-logo">
+                <img id="Aboutpage_logo" src="pics/logo.png" alt="quiz-logo">
 
                 <div id="Aboutpage_introduction">
                     <h4>About:</h4>
@@ -118,7 +118,6 @@
                     <ul>
                         <li>There are 10 questions need to be <span id="Aboutpage_win">ANSWER</span>.</li>
                         <li>At the end, game will shows your <span id="Aboutpage_win">SCORE</span>.</li>
-                        <li>Use F5 to <span id="Aboutpage_reset">RESET</span> the game.</li>
                     </ul>
                 </div>
                 <button id="Aboutpage_next">
@@ -127,28 +126,27 @@
             </div>
 
             <!-- Develop content-->
-         
-            <img id="Develop_logo" src="logo.png" alt="quiz-logo">            
-            <div id="Develop_introduction">
-                <h3>DEVELOPER @2023</h3>
-                <h4>Minh Le</h4>
-                <ul>
-                    <li>Team leader, development, design, & quality control.</li>
-                </ul>
-                <h4>Nhon La</h4>
-                <ul>
-                    <li>Development, documentation, testing, & reporting.</li>
-                </ul>
-            </div>      
-            
-            <button id="Develop_back">
-                <a href="index.html" class="back_button">BACK</a>
-            </button>
+            <div id="Develop_content">
+                <img id="Develop_logo" src="pics/logo.png" alt="quiz-logo">            
+                <div id="Develop_introduction">
+                    <h3>DEVELOPER @2023</h3>
+                    <h4>Minh Le</h4>
+                    <ul>
+                        <li>Team leader, development, design, & quality control.</li>
+                    </ul>
+                    <h4>Nhon La</h4>
+                    <ul>
+                        <li>Development, documentation, testing, & reporting.</li>
+                    </ul>
+                </div>      
+                <button id="Develop_back">
+                    <a href="index.html" class="back_button">BACK</a>
+                </button>
+            </div>
 
             <!-- Question Section-->
 
             <!-- Question 1 ---------------------------------------------------------------------------------->
-
             <div id="Q1_title">
                 <span style="font-weight: bold; color: #ffffff;">Question 1</span> of 10
             </div>
@@ -419,6 +417,7 @@
                 <a href="" class="button">Next</a>
             </button>
 
+
             <!-- Question 10 ---------------------------------------------------------------------------------->
             <div id="Q10_title">
                 <span style="font-weight: bold; color: #ffffff;">Question 10</span> of 10
@@ -446,11 +445,15 @@
                 </button>
             </div>
             
+            
             <!-- Final ---------------------------------------------------------------------------------->
             <div id="announce">
                 <h1 id="congrats">Congratulations!</h1>
-                <h1 id="win">Weldone! You finish the game</h1>
-                <h4 id="text"></h4>               
+                <h1 id="win">Welldone! 🏆</h1>
+                <h4 id="text"></h4> 
+                <button id="Home_button">
+                    <a href="index.html" class="button">Go Home</a>
+                </button>              
             </div>            
         </div>
     </div>
