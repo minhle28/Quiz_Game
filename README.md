@@ -5,11 +5,6 @@
 * Quiz game has 10 multiple-choice questions which are about HTML/CSS.
 * Use the checkbox to modify which one is correct or incorrect.
 
-
-## 💦 Demo Web
-* In progressing
-
-
 ## 🌐 Web Screenshots
 ![1](https://user-images.githubusercontent.com/114270231/226795312-f4336854-aea7-4dd3-816e-41302bb747dd.png)
 
